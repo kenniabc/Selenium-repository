@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>automationSelenium</artifactId>
+    <artifactId>Selenium-repository</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -19,6 +19,13 @@
             <version>4.5.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.9.1</version>
+            <scope>test</scope>
+
+        </dependency>
     </dependencies>
 
 </project>
