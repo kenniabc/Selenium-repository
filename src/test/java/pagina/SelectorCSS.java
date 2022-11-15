@@ -8,6 +8,23 @@ import org.openqa.selenium.WebElement;
 
 public class SelectorCSS extends ClaseBase1 {
 
+    public void login() throws InterruptedException {
+    WebElement username = driver.findElement(By.cssSelector("#user-name"));
+    WebElement selectorTypePassword = driver.findElement(By.cssSelector("input[type=\"password\"]"));
+    WebElement selectorButon = driver.findElement(By.cssSelector("#login-button"));
+
+    username.sendKeys("standard_user");
+    selectorTypePassword.sendKeys("secret_sauce");
+    selectorButon.click();
+    Thread.sleep(5000);
+    }
+    @Test
+    public void anyTag() throws InterruptedException {
+        login();
+        WebElement selectorClase = driver.findElement(By.cssSelector("*[class='pricebar']"));
+        SeleniumUtils.printElementInfo("buscando con CSS todas la clases", selectorClase);
+    }
+
     @Test
     public void TestUsingType(){
         WebElement selector = driver.findElement(By.cssSelector("input[type]"));
